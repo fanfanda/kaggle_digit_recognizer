@@ -22,6 +22,7 @@ import sys
 np.random.seed(2)
 
 # Load the data
+print("load data")
 train = pd.read_csv("../train.csv")
 test = pd.read_csv("../test.csv")
 
