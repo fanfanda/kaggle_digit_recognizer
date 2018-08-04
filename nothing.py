@@ -34,13 +34,13 @@ X_train = train.drop(labels = ["label"], axis = 1)
 del train 
 
 # g = sns.countplot(Y_train)
-
+print("load data")
 print(Y_train.value_counts())
 
 
 # Check the data
-X_train.isnull().any().describe()
-test.isnull().any().describe()
+print(X_train.isnull().any().describe())
+print(test.isnull().any().describe())
 
 sys.exit()
 # Normalize the data
