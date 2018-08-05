@@ -16,6 +16,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import ReduceLROnPlateau
 
 import sys,os
+import tensorflow as tf
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "1" #（其中0.1是选择所调用的gpu）
 
