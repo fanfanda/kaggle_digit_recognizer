@@ -15,13 +15,7 @@ from keras.optimizers import RMSprop
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import ReduceLROnPlateau
 
-import sys,os
-import tensorflow as tf
-
-os.environ["CUDA_VISIBLE_DEVICES"] = "1" #（其中0.1是选择所调用的gpu）
-
-gpu_options = tf.GPUOptions(allow_growth=True)
-sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+import sys
 
 # sns.set(style='white', context='notebook', palette='deep')
 np.random.seed(2)
