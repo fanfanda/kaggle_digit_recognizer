@@ -15,8 +15,12 @@ from keras.optimizers import RMSprop
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import ReduceLROnPlateau
 
-import sys
+import sys,os
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"（其中0.1是选择所调用的gpu）
+
+gpu_options = tf.GPUOptions(allow_growth=True)
+sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 
 # sns.set(style='white', context='notebook', palette='deep')
 np.random.seed(2)
@@ -34,12 +38,12 @@ X_train = train.drop(labels = ["label"], axis = 1)
 del train 
 
 # g = sns.countplot(Y_train)
-print(Y_train.value_counts())
+# print(Y_train.value_counts())
 
 
 # Check the data
-print(X_train.isnull().any().describe())
-print(test.isnull().any().describe())
+# print(X_train.isnull().any().describe())
+# print(test.isnull().any().describe())
 
 # Normalize the data
 X_train = X_train / 255.0
