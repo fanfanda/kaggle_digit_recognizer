@@ -17,7 +17,7 @@ from keras.callbacks import ReduceLROnPlateau
 
 import sys,os
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"（其中0.1是选择所调用的gpu）
+os.environ["CUDA_VISIBLE_DEVICES"] = "1" #（其中0.1是选择所调用的gpu）
 
 gpu_options = tf.GPUOptions(allow_growth=True)
 sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
